@@ -21,34 +21,34 @@ function LoaderScripts(src, cb, ordered){
 
 
 // VENDORS
-LoaderScripts("../assets/vendor/modernizr/modernizr.js", true);
-LoaderScripts("../assets/vendor/jquery/jquery.js", true);
-LoaderScripts("../assets/vendor/jquery-browser-mobile/jquery.browser.mobile.js", true);
-LoaderScripts("../assets/vendor/bootstrap/js/bootstrap.js", true);
-LoaderScripts("../assets/vendor/nanoscroller/nanoscroller.js", true);
-LoaderScripts("../assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js", true);
-LoaderScripts("../assets/vendor/magnific-popup/magnific-popup.js", true);
-LoaderScripts("../assets/vendor/jquery-placeholder/jquery.placeholder.js", true);
-LoaderScripts("../assets/vendor/raphael/raphael.js", true);
-LoaderScripts("../assets/vendor/morris/morris.js", true);
-LoaderScripts("../assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js", true);
-LoaderScripts("../assets/vendor/jquery-maskedinput/jquery.maskedinput.js", true);
-LoaderScripts("../assets/vendor/select2/select2.js", true);
-LoaderScripts("../assets/vendor/bootstrap-fileupload/bootstrap-fileupload.min.js", true);
-LoaderScripts("../assets/vendor/lity/lity.min.js", true);
-// LoaderScripts("../", true);
-// LoaderScripts("../", true);
-// LoaderScripts("../", true);
-// LoaderScripts("../", true);
-// LoaderScripts("../", true);
-// LoaderScripts("../", true);
+LoaderScripts("./assets/vendor/modernizr/modernizr.js", true);
+LoaderScripts("./assets/vendor/jquery/jquery.js", true);
+LoaderScripts("./assets/vendor/jquery-browser-mobile/jquery.browser.mobile.js", true);
+LoaderScripts("./assets/vendor/bootstrap/js/bootstrap.js", true);
+LoaderScripts("./assets/vendor/nanoscroller/nanoscroller.js", true);
+LoaderScripts("./assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js", true);
+LoaderScripts("./assets/vendor/magnific-popup/magnific-popup.js", true);
+LoaderScripts("./assets/vendor/jquery-placeholder/jquery.placeholder.js", true);
+LoaderScripts("./assets/vendor/raphael/raphael.js", true);
+LoaderScripts("./assets/vendor/morris/morris.js", true);
+LoaderScripts("./assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js", true);
+LoaderScripts("./assets/vendor/jquery-maskedinput/jquery.maskedinput.js", true);
+LoaderScripts("./assets/vendor/select2/select2.js", true);
+LoaderScripts("./assets/vendor/bootstrap-fileupload/bootstrap-fileupload.min.js", true);
+LoaderScripts("./assets/vendor/lity/lity.min.js", true);
+// LoaderScripts("./", true);
+// LoaderScripts("./", true);
+// LoaderScripts("./", true);
+// LoaderScripts("./", true);
+// LoaderScripts("./", true);
+// LoaderScripts("./", true);
 
 
-LoaderScripts("../assets/javascripts/theme.js", true);
-LoaderScripts("../assets/javascripts/theme.custom.js", true);
-LoaderScripts("../assets/javascripts/theme.init.js", true);
-// LoaderScripts("../", true);
-// LoaderScripts("../", true);
+LoaderScripts("./assets/javascripts/theme.js", true);
+LoaderScripts("./assets/javascripts/theme.custom.js", true);
+LoaderScripts("./assets/javascripts/theme.init.js", true);
+// LoaderScripts("./", true);
+// LoaderScripts("./", true);
 
 LoaderScripts("assets/javascripts/theme.init.js", function() {
     
