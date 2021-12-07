@@ -1,0 +1,695 @@
+<!doctype html>
+<html class="fixed">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Transfero</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<link rel="icon" href="img/favicon.png">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+	<section class="body">
+
+		<!-- start: header -->
+		<header class="header">
+			<div class="logo-container">
+				<a href="index.html" class="logo">
+					<img src="img/logo.svg" height="35" alt="Transfero" />
+				</a>
+				<div class="visible-xs toggle-sidebar-left" data-toggle-class="sidebar-left-opened" data-target="html"
+					data-fire-event="sidebar-left-opened">
+					<i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+				</div>
+			</div>
+
+			<!-- start: search & user box -->
+			<div class="header-right">
+
+				<form action="customers.html" class="search nav-form">
+					<div class="input-group input-search">
+						<input type="text" class="form-control" name="q" id="q" placeholder="Search...">
+						<span class="input-group-btn">
+							<button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+						</span>
+					</div>
+				</form>
+
+				<span class="separator"></span>
+
+				<div id="userbox" class="userbox">
+					<a data-toggle="dropdown">
+						<figure class="profile-picture">
+							<img src="img/profile.svg" alt="Joseph Doe" class="img-circle"
+								data-lock-picture="img/profile.svg" />
+						</figure>
+						<div class="profile-info" data-lock-name="John Doe" data-lock-email="johndoe@JSOFT.com">
+							<span class="name">Welison Menezes</span>
+							<span class="role">administrator</span>
+						</div>
+						<i class="fa custom-caret"></i>
+					</a>
+
+					<div class="dropdown-menu">
+						<ul class="list-unstyled">
+							<li class="divider"></li>
+							<li>
+								<a role="menuitem" tabindex="-1" href="logout.html"><i class="fa fa-power-off"></i> Logout</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- end: search & user box -->
+		</header>
+		<!-- end: header -->
+
+		<div class="inner-wrapper">
+
+			<!-- start: sidebar -->
+			<aside id="sidebar-left" class="sidebar-left">
+
+				<div class="sidebar-header">
+					<div class="sidebar-toggle hidden-xs" data-toggle-class="sidebar-left-collapsed" data-target="html"
+						data-fire-event="sidebar-left-toggle">
+						<i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+					</div>
+				</div>
+
+				<div class="nano">
+					<div class="nano-content">
+						<nav id="menu" class="nav-main" role="navigation">
+							<ul class="nav nav-main">
+								<li class="nav-active">
+									<a href="index.html">
+										<i class="fa fa-home" aria-hidden="true"></i>
+										<span>Dashboard</span>
+									</a>
+								</li>
+								<li>
+									<a href="customers.html">
+										<i class="fa fa-user" aria-hidden="true"></i>
+										<span>Customers</span>
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+
+			</aside>
+			<!-- end: sidebar -->
+
+			<section role="main" class="content-body">
+
+				<header class="page-header">
+					<h2>Dashboard</h2>
+				</header>
+
+				<main class="cotainer-fluid">
+
+					<div class="row">
+
+						<div class="col-xl-4 col-lg-6 col-md-12">
+							<div class="panel-body">
+								<div class="widget-summary">
+									<div class="widget-summary-col">
+										<div class="summary-header">
+											<h4 class="title">
+												<strong>BASIC PROFILE</strong>
+											</h4>
+										</div>
+										<div class="summary" id="accordionBasic">
+											<div class="info">
+												Customers: <b>5749</b>
+												<a class="text-muted text-uppercase accordion-toggle collapsed"
+													data-toggle="collapse" data-parent="#accordionBasic"
+													href="#collapseFilterBasic">
+													filters <i class="fa fa-chevron-down"></i>
+												</a>
+											</div>
+											<div class="info accordion-body collapse" id="collapseFilterBasic">
+												<ul>
+													<li>
+														<a href="customers.html" class="text-muted text-uppercase text-primary">
+															All <small>(5749)</small>
+														</a>
+													</li>
+													<li>
+														<a href="customers.html" class="text-muted text-uppercase text-success">
+															New <small>(5749)</small>
+														</a>
+													</li>
+												</ul>
+											</div>
+											<div class="info">
+												Fields: <b>7</b>
+												<a class="text-muted text-uppercase" data-toggle="modal"
+													data-target="#modalBasic">
+													details <i class="fa fa-info-circle"></i>
+												</a>
+											</div>
+											<div class="info statuses">
+												<span class="label label-default">Enabled</span>
+												<span class="label label-default">Exclusive</span>
+											</div>
+										</div>
+									</div>
+									<div class="widget-summary-col">
+										<div class="chart-container">
+											<div class="chart chart-md" id="chartBasic"></div>
+										</div>
+									</div>
+								</div>
+								<div class="modal fade" id="modalBasic" tabindex="-1" role="dialog"
+									aria-labelledby="modalBasicLabel" aria-hidden="true">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span
+														aria-hidden="true">&times;</span><span
+														class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="modalBasicLabel">Basic Profile Fields</h4>
+											</div>
+											<div class="modal-body">
+												<ul class="list-group">
+													<li class="list-group-item">Tax Country</li>
+													<li class="list-group-item">Tax ID</li>
+													<li class="list-group-item">Email</li>
+													<li class="list-group-item">First Name</li>
+													<li class="list-group-item">Last Name</li>
+													<li class="list-group-item">Birth Date</li>
+													<li class="list-group-item">Company Name</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-xl-4 col-lg-6 col-md-12">
+							<div class="panel-body">
+								<div class="widget-summary">
+									<div class="widget-summary-col">
+										<div class="summary-header">
+											<h4 class="title">
+												<strong>3RZ PROFILE</strong>
+											</h4>
+											<div class="tag">
+												Tag: <b class="label label-primary">3rz</b>
+											</div>
+										</div>
+										<div class="summary" id="accordion3RZ">
+											<div class="info">
+												Customers: <b>34</b>
+												<a class="text-muted text-uppercase accordion-toggle collapsed"
+													data-toggle="collapse" data-parent="#accordion3RZ"
+													href="#collapseFilter3RZ">
+													filters <i class="fa fa-chevron-down"></i>
+												</a>
+											</div>
+											<div class="info accordion-body collapse" id="collapseFilter3RZ">
+												<ul>
+													<li>
+														<a href="customers.html" class="text-muted text-uppercase text-primary">
+															All <small>(34)</small>
+														</a>
+													</li>
+													<li>
+														<a href="customers.html" class="text-muted text-uppercase text-success">
+															All <small>(32)</small>
+														</a>
+													</li>
+													<li>
+														<a href="customers.html" class="text-muted text-uppercase text-warning">
+															Pending <small>(1)</small>
+														</a>
+													</li>
+													<li>
+														<a href="customers.html" class="text-muted text-uppercase text-info">
+															Aproved <small>(1)</small>
+														</a>
+													</li>
+												</ul>
+											</div>
+											<div class="info">
+												Fields: <b>1</b>
+												<a class="text-muted text-uppercase" data-toggle="modal"
+													data-target="#modal3RZ">
+													details <i class="fa fa-info-circle"></i>
+												</a>
+											</div>
+											<div class="info statuses">
+												<span class="label label-default">Enabled</span>
+												<span class="label label-default">Exclusive</span>
+											</div>
+										</div>
+									</div>
+									<div class="widget-summary-col">
+										<div class="chart-container">
+											<div class="chart chart-md" id="chart3RZ"></div>
+										</div>
+									</div>
+								</div>
+								<div class="modal fade" id="modal3RZ" tabindex="-1" role="dialog"
+									aria-labelledby="modal3RZLabel" aria-hidden="true">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span
+														aria-hidden="true">&times;</span><span
+														class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="modal3RZLabel">3RZ Profile Fields</h4>
+											</div>
+											<div class="modal-body">
+												<ul class="list-group">
+													<li class="list-group-item">Tag Name <span class="badge bg-primary">3rz</span></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-xl-4 col-lg-6 col-md-12">
+							<div class="panel-body">
+								<div class="widget-summary">
+									<div class="widget-summary-col">
+										<div class="summary-header">
+											<h4 class="title">
+												<strong>LEVEL1 PROFILE</strong>
+											</h4>
+										</div>
+										<div class="summary" id="accordionLevel1">
+											<div class="info">
+												Customers: <b>24</b>
+												<a class="text-muted text-uppercase accordion-toggle collapsed"
+													data-toggle="collapse" data-parent="#accordionLevel1"
+													href="#collapseFilterLevel1">
+													filters <i class="fa fa-chevron-down"></i>
+												</a>
+											</div>
+											<div class="info accordion-body collapse" id="collapseFilterLevel1">
+												<ul>
+													<li>
+														<a href="customers.html" class="text-muted text-uppercase text-primary">
+															All <small>(24)</small>
+														</a>
+													</li>
+													<li>
+														<a href="customers.html" class="text-muted text-uppercase text-success">
+															New <small>(4)</small>
+														</a>
+													</li>
+													<li>
+														<a href="customers.html" class="text-muted text-uppercase text-warning">
+															Pending <small>(4)</small>
+														</a>
+													</li>
+													<li>
+														<a href="customers.html" class="text-muted text-uppercase text-danger">
+															Reproved <small>(1)</small>
+														</a>
+													</li>
+													<li>
+														<a href="customers.html" class="text-muted text-uppercase text-info">
+															Aproved <small>(15)</small>
+														</a>
+													</li>
+												</ul>
+											</div>
+											<div class="info">
+												Fields: <b>5</b>
+												<a class="text-muted text-uppercase" data-toggle="modal"
+													data-target="#modalLevel1">
+													details <i class="fa fa-info-circle"></i>
+												</a>
+											</div>
+											<div class="info statuses">
+												<span class="label label-default">Enabled</span>
+												<span class="label label-default">Exclusive</span>
+											</div>
+										</div>
+									</div>
+									<div class="widget-summary-col">
+										<div class="chart-container">
+											<div class="chart chart-md" id="chartLevel1"></div>
+										</div>
+									</div>
+								</div>
+								<div class="modal fade" id="modalLevel1" tabindex="-1" role="dialog"
+									aria-labelledby="modalLevel1Label" aria-hidden="true">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span
+														aria-hidden="true">&times;</span><span
+														class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="modalLevel1Label">Level1 Profile Fields</h4>
+											</div>
+											<div class="modal-body">
+												<ul class="list-group">
+													<li class="list-group-item">Document Id</li>
+													<li class="list-group-item">Document Url</li>
+													<li class="list-group-item">Document Name</li>
+													<li class="list-group-item">Document Mime Type</li>
+													<li class="list-group-item">Document Type</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-xl-4 col-lg-6 col-md-12">
+							<div class="panel-body">
+								<div class="widget-summary">
+									<div class="widget-summary-col">
+										<div class="summary-header">
+											<h4 class="title">
+												<strong>STELLAR PROFILE</strong>
+											</h4>
+											<div class="tag">
+												Tag: <b class="label label-primary">stellar</b>
+											</div>
+										</div>
+										<div class="summary" id="accordionStellar">
+											<div class="info">
+												Customers: <b>7</b>
+												<a class="text-muted text-uppercase accordion-toggle collapsed"
+													data-toggle="collapse" data-parent="#accordionStellar"
+													href="#collapseFilterStellar">
+													filters <i class="fa fa-chevron-down"></i>
+												</a>
+											</div>
+											<div class="info accordion-body collapse" id="collapseFilterStellar">
+												<ul>
+													<li>
+														<a href="customers.html" class="text-muted text-uppercase text-primary">
+															All <small>(7)</small>
+														</a>
+													</li>
+													<li>
+														<a href="customers.html" class="text-muted text-uppercase text-success">
+															New <small>(6)</small>
+														</a>
+													</li>
+													<li>
+														<a href="customers.html" class="text-muted text-uppercase text-info">
+															Aproved <small>(1)</small>
+														</a>
+													</li>
+												</ul>
+											</div>
+											<div class="info">
+												Fields: <b>13</b>
+												<a class="text-muted text-uppercase" data-toggle="modal"
+													data-target="#modalStellar">
+													details <i class="fa fa-info-circle"></i>
+												</a>
+											</div>
+											<div class="info statuses">
+												<span class="label label-default">Enabled</span>
+												<span class="label label-default">Exclusive</span>
+											</div>
+										</div>
+									</div>
+									<div class="widget-summary-col">
+										<div class="chart-container">
+											<div class="chart chart-md" id="chartStellar"></div>
+										</div>
+									</div>
+								</div>
+								<div class="modal fade" id="modalStellar" tabindex="-1" role="dialog"
+									aria-labelledby="modalStellarLabel" aria-hidden="true">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span
+														aria-hidden="true">&times;</span><span
+														class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="modalStellarLabel">Stellar Profile Fields</h4>
+											</div>
+											<div class="modal-body">
+												<ul class="list-group">
+													<li class="list-group-item">Tax ID</li>
+													<li class="list-group-item">Email</li>
+													<li class="list-group-item">First Name</li>
+													<li class="list-group-item">Last Name</li>
+													<li class="list-group-item">Birth Date</li>
+													<li class="list-group-item">Company Name</li>
+													<li class="list-group-item">Cellphone Number</li>
+													<li class="list-group-item">Document Id</li>
+													<li class="list-group-item">Document Url</li>
+													<li class="list-group-item">Document Name</li>
+													<li class="list-group-item">Document Mime Type</li>
+													<li class="list-group-item">Document Type</li>
+													<li class="list-group-item">Tag Name <span class="badge bg-primary">stellar</span></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-xl-4 col-lg-6 col-md-12">
+							<div class="panel-body">
+								<div class="widget-summary">
+									<div class="widget-summary-col">
+										<div class="summary-header">
+											<h4 class="title">
+												<strong>PAXFUL PROFILE</strong>
+											</h4>
+											<div class="tag">
+												Tag: <b class="label label-primary">paxful</b>
+											</div>
+										</div>
+										<div class="summary" id="accordionPaxful">
+											<div class="info">
+												Customers: <b>0</b>
+											</div>
+											<div class="info">
+												Fields: <b>1</b>
+												<a class="text-muted text-uppercase" data-toggle="modal"
+													data-target="#modalPaxful">
+													details <i class="fa fa-info-circle"></i>
+												</a>
+											</div>
+											<div class="info statuses">
+												<span class="label label-default">Enabled</span>
+												<span class="label label-default">Exclusive</span>
+											</div>
+										</div>
+									</div>
+									<div class="widget-summary-col">
+										<div class="chart-container">
+											<div class="chart chart-md" id="chartPaxful"></div>
+										</div>
+									</div>
+								</div>
+								<div class="modal fade" id="modalPaxful" tabindex="-1" role="dialog"
+									aria-labelledby="modalPaxfulLabel" aria-hidden="true">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span
+														aria-hidden="true">&times;</span><span
+														class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="modalPaxfulLabel">Paxful Profile Fields</h4>
+											</div>
+											<div class="modal-body">
+												<ul class="list-group">
+													<li class="list-group-item">Tag Name <span class="badge bg-primary">paxfull</span></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-xl-4 col-lg-6 col-md-12">
+							<div class="panel-body">
+								<div class="widget-summary">
+									<div class="widget-summary-col">
+										<div class="summary-header">
+											<h4 class="title">
+												<strong>OPERATOR PROFILE</strong>
+											</h4>
+											<div class="tag">
+												Tag: <b class="label label-primary">operator</b>
+											</div>
+										</div>
+										<div class="summary" id="accordionOperator">
+											<div class="info">
+												Customers: <b>8</b>
+												<a class="text-muted text-uppercase accordion-toggle collapsed"
+													data-toggle="collapse" data-parent="#accordionOperator"
+													href="#collapseFilterOperator">
+													filters <i class="fa fa-chevron-down"></i>
+												</a>
+											</div>
+											<div class="info accordion-body collapse" id="collapseFilterOperator">
+												<ul>
+													<li>
+														<a href="customers.html" class="text-muted text-uppercase text-primary">
+															All <small>(8)</small>
+														</a>
+													</li>
+													<li>
+														<a href="customers.html" class="text-muted text-uppercase text-success">
+															New <small>(8)</small>
+														</a>
+													</li>
+												</ul>
+											</div>
+											<div class="info">
+												Fields: <b>1</b>
+												<a class="text-muted text-uppercase" data-toggle="modal"
+													data-target="#modalOperator">
+													details <i class="fa fa-info-circle"></i>
+												</a>
+											</div>
+											<div class="info statuses">
+												<span class="label label-default">Enabled</span>
+												<span class="label label-default">Exclusive</span>
+											</div>
+										</div>
+									</div>
+									<div class="widget-summary-col">
+										<div class="chart-container">
+											<div class="chart chart-md" id="chartOperator"></div>
+										</div>
+									</div>
+								</div>
+								<div class="modal fade" id="modalOperator" tabindex="-1" role="dialog"
+									aria-labelledby="modalOperatorLabel" aria-hidden="true">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span
+														aria-hidden="true">&times;</span><span
+														class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="modalOperatorLabel">Operator Profile Fields</h4>
+											</div>
+											<div class="modal-body">
+												<ul class="list-group">
+													<li class="list-group-item">Tag Name <span class="badge bg-primary">operator</span></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-xl-4 col-lg-6 col-md-12">
+							<div class="panel-body">
+								<div class="widget-summary">
+									<div class="widget-summary-col">
+										<div class="summary-header">
+											<h4 class="title">
+												<strong>SUMSUB PROFILE</strong>
+											</h4>
+											<div class="tag">
+												Tag: <b class="label label-primary">sumsub</b>
+											</div>
+										</div>
+										<div class="summary" id="accordionSumsub">
+											<div class="info">
+												Customers: <b>8</b>
+												<a class="text-muted text-uppercase accordion-toggle collapsed"
+													data-toggle="collapse" data-parent="#accordionSumsub"
+													href="#collapseFilterSumsub">
+													filters <i class="fa fa-chevron-down"></i>
+												</a>
+											</div>
+											<div class="info accordion-body collapse" id="collapseFilterSumsub">
+												<ul>
+													<li>
+														<a href="customers.html" class="text-muted text-uppercase text-primary">
+															All <small>(8)</small>
+														</a>
+													</li>
+													<li>
+														<a href="customers.html" class="text-muted text-uppercase text-success">
+															New <small>(2)</small>
+														</a>
+													</li>
+													<li>
+														<a href="customers.html" class="text-muted text-uppercase text-warning">
+															Pending <small>(4)</small>
+														</a>
+													</li>
+													<li>
+														<a href="customers.html" class="text-muted text-uppercase text-danger">
+															Reproved <small>(1)</small>
+														</a>
+													</li>
+													<li>
+														<a href="customers.html" class="text-muted text-uppercase text-info">
+															Aproved <small>(1)</small>
+														</a>
+													</li>
+												</ul>
+											</div>
+											<div class="info">
+												Fields: <b>1</b>
+												<a class="text-muted text-uppercase" data-toggle="modal"
+													data-target="#modalSumsub">
+													details <i class="fa fa-info-circle"></i>
+												</a>
+											</div>
+											<div class="info statuses">
+												<span class="label label-default">Enabled</span>
+												<span class="label label-default">Exclusive</span>
+											</div>
+										</div>
+									</div>
+									<div class="widget-summary-col">
+										<div class="chart-container">
+											<div class="chart chart-md" id="chartSumsub"></div>
+										</div>
+									</div>
+								</div>
+								<div class="modal fade" id="modalSumsub" tabindex="-1" role="dialog"
+									aria-labelledby="modalSumsubLabel" aria-hidden="true">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span
+														aria-hidden="true">&times;</span><span
+														class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="modalSumsubLabel">Sumsub Profile Fields</h4>
+											</div>
+											<div class="modal-body">
+												<ul class="list-group">
+													<li class="list-group-item">Tag Name <span class="badge bg-primary">sumsub</span></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</main>
+
+			</section>
+		</div>
+
+	</section>
+
+	<script src="js/app.js"></script>
+</body>
+
+</html>

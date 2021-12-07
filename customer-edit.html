@@ -1,0 +1,697 @@
+<!doctype html>
+<html class="fixed">
+<head>
+	<meta charset="UTF-8">
+	<title>Transfero</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<link rel="icon" href="img/favicon.png">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+	<section class="body">
+
+		<!-- start: header -->
+		<header class="header">
+			<div class="logo-container">
+				<a href="index.html" class="logo">
+					<img src="img/logo.svg" height="35" alt="Transfero" />
+				</a>
+				<div class="visible-xs toggle-sidebar-left" data-toggle-class="sidebar-left-opened" data-target="html"
+					data-fire-event="sidebar-left-opened">
+					<i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+				</div>
+			</div>
+
+			<!-- start: search & user box -->
+			<div class="header-right">
+
+				<form action="customers.html" class="search nav-form">
+					<div class="input-group input-search">
+						<input type="text" class="form-control" name="q" id="q" placeholder="Search...">
+						<span class="input-group-btn">
+							<button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+						</span>
+					</div>
+				</form>
+
+				<span class="separator"></span>
+
+				<div id="userbox" class="userbox">
+					<a data-toggle="dropdown">
+						<figure class="profile-picture">
+							<img src="img/profile.svg" alt="Joseph Doe" class="img-circle"
+								data-lock-picture="img/profile.svg" />
+						</figure>
+						<div class="profile-info" data-lock-name="John Doe" data-lock-email="johndoe@JSOFT.com">
+							<span class="name">Welison Menezes</span>
+							<span class="role">administrator</span>
+						</div>
+						<i class="fa custom-caret"></i>
+					</a>
+
+					<div class="dropdown-menu">
+						<ul class="list-unstyled">
+							<li class="divider"></li>
+							<li>
+								<a role="menuitem" tabindex="-1" href="logout.html"><i class="fa fa-power-off"></i> Logout</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- end: search & user box -->
+		</header>
+		<!-- end: header -->
+
+		<div class="inner-wrapper">
+
+			<!-- start: sidebar -->
+			<aside id="sidebar-left" class="sidebar-left">
+
+				<div class="sidebar-header">
+					<div class="sidebar-toggle hidden-xs" data-toggle-class="sidebar-left-collapsed" data-target="html"
+						data-fire-event="sidebar-left-toggle">
+						<i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+					</div>
+				</div>
+
+				<div class="nano">
+					<div class="nano-content">
+						<nav id="menu" class="nav-main" role="navigation">
+							<ul class="nav nav-main">
+								<li>
+									<a href="index.html">
+										<i class="fa fa-home" aria-hidden="true"></i>
+										<span>Dashboard</span>
+									</a>
+								</li>
+								<li class="nav-active">
+									<a href="customers.html">
+										<i class="fa fa-user" aria-hidden="true"></i>
+										<span>Customers</span>
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+
+			</aside>
+			<!-- end: sidebar -->
+
+			<section role="main" class="content-body">
+
+				<header class="page-header">
+					<h2>Welison de Siqueira Menezes</h2>
+				
+					<div class="right-wrapper pull-right">
+						<ol class="breadcrumbs">
+							<li>
+								<a href="index.html">
+									<i class="fa fa-home"></i>
+								</a>
+							</li>
+							<li>
+								<a href="customers.html">
+									Customers
+								</a>
+							</li>
+							<li><span>Edit</span></li>
+						</ol>
+					</div>
+				</header>
+
+				<main class="cotainer-fluid">
+					<div class="row">
+
+						<div class="col-md-6">
+							<section class="panel">
+								<header class="panel-heading">
+									<div class="panel-actions">
+										<a class="fa fa-caret-down"></a>
+									</div>
+									<h2 class="panel-title">Customer Info</h2>
+								</header>
+								<div class="panel-body">
+									<form action="#">
+										<div class="row">
+											<div class="col-md-12 form-group">
+												<label class="control-label">Type <span class="required">*</span></label>
+												<select class="form-control">
+													<option>Person</option>
+													<option>Company</option>
+												</select>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-6 form-group">
+												<label class="control-label">First Name <span class="required">*</span></label>
+												<input type="text" class="form-control">
+											</div>
+											<div class="col-md-6 form-group">
+												<label class="control-label">Last Name <span class="required">*</span></label>
+												<input type="text" class="form-control">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-6 form-group">
+												<label class="control-label">E-mail <span class="required">*</span></label>
+												<input type="email" class="form-control">
+											</div>
+											<div class="col-md-6 form-group">
+												<label class="control-label">Brithdate <span class="required">*</span></label>
+												<input id="date"  data-plugin-datepicker="" data-plugin-masked-input="" data-input-mask="99/99/9999" placeholder="__/__/____" class="form-control">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-6 form-group">
+												<label class="control-label">Cellphone Number <span class="required">*</span></label>
+												<input id="phone" data-plugin-masked-input="" data-input-mask="(99) 9999-99999" placeholder="(00) 0000-00000" class="form-control">
+											</div>
+											<div class="col-md-6 form-group">
+												<label class="control-label">Phone Number</label>
+												<input id="phone" data-plugin-masked-input="" data-input-mask="(99) 9999-99999" placeholder="(00) 0000-00000" class="form-control">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-6 form-group">
+												<label class="control-label">TaxId <span class="required">*</span></label>
+												<input type="text" class="form-control">
+											</div>
+											<div class="col-md-6 form-group">
+												<label class="control-label">Country <span class="required">*</span></label>
+												<select data-plugin-selectTwo class="form-control populate">
+													<option value=""></option>
+													<option value="1">Argentina</option>
+													<option value="2">Brasil</option>
+													<option value="3">Colômbia</option>
+													<option value="4">Paraguai</option>
+													<option value="5">Uruguai</option>
+												</select>
+											</div>
+										</div>
+										<div class="row mb-none">
+											<div class="col-md-12 mb-none">
+												<button type="button" class="mb-xs mt-xs mr-xs btn btn-primary">Save</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</section>
+
+							<section class="panel">
+								<header class="panel-heading">
+									<div class="panel-actions">
+										<a class="fa fa-caret-down"></a>
+									</div>
+									<h2 class="panel-title">Address</h2>
+								</header>
+								<div class="panel-body">
+									<form action="#">
+										<div class="row">
+											<div class="col-md-6 form-group">
+												<label class="control-label">Street <span class="required">*</span></label>
+												<input type="text" class="form-control">
+											</div>
+											<div class="col-md-6 form-group">
+												<label class="control-label">Zip Code <span class="required">*</span></label>
+												<input type="text" class="form-control">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-6 form-group">
+												<label class="control-label">Neighborhood <span class="required">*</span></label>
+												<input type="text" class="form-control">
+											</div>
+											<div class="col-md-6 form-group">
+												<label class="control-label">City <span class="required">*</span></label>
+												<input type="text" class="form-control">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-6 form-group">
+												<label class="control-label">State <span class="required">*</span></label>
+												<input type="text" class="form-control">
+											</div>
+											<div class="col-md-6 form-group">
+												<label class="control-label">Country <span class="required">*</span></label>
+												<input type="text" class="form-control">
+											</div>
+										</div>
+										<div class="row mb-none">
+											<div class="col-md-12 mb-none">
+												<button type="button" class="mb-xs mt-xs mr-xs btn btn-primary">Save</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</section>
+						</div>
+
+						<div class="col-md-6">
+
+							<section class="panel">
+								<header class="panel-heading">
+									<div class="panel-actions">
+										<a class="fa fa-caret-down"></a>
+									</div>
+									<h2 class="panel-title">Profiles</h2>
+								</header>
+							<div class="panel-body">
+									<table class="table mb-none table-customer-profiles">
+										<thead>
+											<tr>
+												<th>Profile</th>
+												<th>Status</th>
+												<th>Comments</th>
+												<th>Action</th>
+											</tr>
+										</thead>
+										<tbody>
+											
+											<!-- profile one -->
+											<tr class="profile-basic">
+												<td><h4>basic</h4></td>
+												<td>
+													<div class="hide-if-active">
+														<span class="circle bg-success"></span> Approve
+													</div>
+													<div class="show-if-active">
+														<div class="drop-filter d-flex"> 
+															<div class="input-group-btn">
+																<button tabindex="-1" class="btn btn-default dropdown-toggle btn-sm btn-label" data-toggle="dropdown" type="button">
+																	<span class="circle bg-success"></span> Approve
+																</button>
+																<button tabindex="-1" data-toggle="dropdown" class="btn btn-default dropdown-toggle btn-sm" type="button">
+																	<span class="caret"></span>
+																</button>
+																<ul role="menu" class="dropdown-menu">
+																	<li>
+																		<a><span class="circle bg-default"></span> All</a>
+																	</li>
+																	<li>
+																		<a><span class="circle bg-info"></span> New</a>
+																	</li>
+																	<li>
+																		<a><span class="circle bg-warning"></span> Pending</a>
+																	</li>
+																	<li>
+																		<a><span class="circle bg-danger"></span> Reproved</a>
+																	</li>
+																	<li>
+																		<a><span class="circle bg-success"></span> Approved</a>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</td>
+												<td>
+													<span>0 comments</span>
+												</td>
+												<td>
+													<div class="hide-if-active">
+														<a onclick="OpenProfileEditFrom('profile-basic')">
+															Edit <i class="fa fa-save"></i>
+														</a>
+													</div>
+													<div class="show-if-active">
+														<button type="button" class="mb-xs mt-xs mr-xs btn btn-default btn-sm" onclick="CloseProfileEditFrom('profile-basic')">
+															Cancel
+														</button>
+														<button type="button" class="mb-xs mt-xs mr-xs btn btn-primary btn-sm" onclick="CloseProfileEditFrom('profile-basic')">
+															Save
+														</button>
+													</div>
+												</td>
+											</tr>
+											<tr class="no-border tr-comment-form profile-basic">
+												<td colspan="4" class="no-padding">
+													<div class="input-group">
+														<input type="text" class="form-control input-sm" placeholder="Add comment">
+														<span class="input-group-btn">
+															<button class="btn btn-default btn-sm" type="button">Add</button>
+														</span>
+													</div>
+												</td>
+											</tr>
+											<tr class="no-border tr-comments profile-basic">
+												<td colspan="4">
+													<h5>Comments</h5>
+													<ul class="list-group">
+														<li class="list-group-item">
+															<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa sit quia tenetur.</p>
+														</li>
+														<li class="list-group-item">
+															<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa sit quia tenetur.</p>
+														</li>
+													</ul>
+												</td>
+											</tr>
+											<!-- end profile two -->
+
+											<!-- profile two -->
+											<tr class="profile-3rz">
+												<td><h4>3rz</h4></td>
+												<td>
+													<div class="hide-if-active">
+														<span class="circle bg-warning"></span> Pending
+													</div>
+													<div class="show-if-active">
+														<div class="drop-filter d-flex"> 
+															<div class="input-group-btn">
+																<button tabindex="-1" class="btn btn-default dropdown-toggle btn-sm btn-label" data-toggle="dropdown" type="button">
+																	<span class="circle bg-warning"></span> Pending
+																</button>
+																<button tabindex="-1" data-toggle="dropdown" class="btn btn-default dropdown-toggle btn-sm" type="button">
+																	<span class="caret"></span>
+																</button>
+																<ul role="menu" class="dropdown-menu">
+																	<li>
+																		<a><span class="circle bg-default"></span> All</a>
+																	</li>
+																	<li>
+																		<a><span class="circle bg-info"></span> New</a>
+																	</li>
+																	<li>
+																		<a><span class="circle bg-warning"></span> Pending</a>
+																	</li>
+																	<li>
+																		<a><span class="circle bg-danger"></span> Reproved</a>
+																	</li>
+																	<li>
+																		<a><span class="circle bg-success"></span> Approved</a>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</td>
+												<td>
+													<span>0 comments</span>
+												</td>
+												<td>
+													<div class="hide-if-active">
+														<a onclick="OpenProfileEditFrom('profile-3rz')">
+															Edit <i class="fa fa-save"></i>
+														</a>
+													</div>
+													<div class="show-if-active">
+														<button type="button" class="mb-xs mt-xs mr-xs btn btn-default btn-sm" onclick="CloseProfileEditFrom('profile-3rz')">
+															Cancel
+														</button>
+														<button type="button" class="mb-xs mt-xs mr-xs btn btn-primary btn-sm" onclick="CloseProfileEditFrom('profile-3rz')">
+															Save
+														</button>
+													</div>
+												</td>
+											</tr>
+											<tr class="no-border tr-comment-form profile-3rz">
+												<td colspan="4" class="no-padding">
+													<div class="input-group">
+														<input type="text" class="form-control input-sm" placeholder="Add comment">
+														<span class="input-group-btn">
+															<button class="btn btn-default btn-sm" type="button">Add</button>
+														</span>
+													</div>
+												</td>
+											</tr>
+											<tr class="no-border tr-comments profile-3rz">
+												<td colspan="4">
+													<h5>Comments</h5>
+													<ul class="list-group">
+														<li class="list-group-item">
+															<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa sit quia tenetur.</p>
+														</li>
+														<li class="list-group-item">
+															<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa sit quia tenetur.</p>
+														</li>
+													</ul>
+												</td>
+											</tr>
+											<!-- end profile two -->
+
+											<!-- profile three -->
+											<tr class="profile-sumsub">
+												<td><h4>sumsub</h4></td>
+												<td>
+													<div class="hide-if-active">
+														<span class="circle bg-danger"></span> Reproved
+													</div>
+													<div class="show-if-active">
+														<div class="drop-filter d-flex"> 
+															<div class="input-group-btn">
+																<button tabindex="-1" class="btn btn-default dropdown-toggle btn-sm btn-label" data-toggle="dropdown" type="button">
+																	<span class="circle bg-danger"></span> Reproved
+																</button>
+																<button tabindex="-1" data-toggle="dropdown" class="btn btn-default dropdown-toggle btn-sm" type="button">
+																	<span class="caret"></span>
+																</button>
+																<ul role="menu" class="dropdown-menu">
+																	<li>
+																		<a><span class="circle bg-default"></span> All</a>
+																	</li>
+																	<li>
+																		<a><span class="circle bg-info"></span> New</a>
+																	</li>
+																	<li>
+																		<a><span class="circle bg-warning"></span> Pending</a>
+																	</li>
+																	<li>
+																		<a><span class="circle bg-danger"></span> Reproved</a>
+																	</li>
+																	<li>
+																		<a><span class="circle bg-success"></span> Approved</a>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</td>
+												<td>
+													<span>0 comments</span>
+												</td>
+												<td>
+													<div class="hide-if-active">
+														<a onclick="OpenProfileEditFrom('profile-sumsub')">
+															Edit <i class="fa fa-save"></i>
+														</a>
+													</div>
+													<div class="show-if-active">
+														<button type="button" class="mb-xs mt-xs mr-xs btn btn-default btn-sm" onclick="CloseProfileEditFrom('profile-sumsub')">
+															Cancel
+														</button>
+														<button type="button" class="mb-xs mt-xs mr-xs btn btn-primary btn-sm" onclick="CloseProfileEditFrom('profile-sumsub')">
+															Save
+														</button>
+													</div>
+												</td>
+											</tr>
+											<tr class="no-border tr-comment-form profile-sumsub">
+												<td colspan="4" class="no-padding">
+													<div class="input-group">
+														<input type="text" class="form-control input-sm" placeholder="Add comment">
+														<span class="input-group-btn">
+															<button class="btn btn-default btn-sm" type="button">Add</button>
+														</span>
+													</div>
+												</td>
+											</tr>
+											<tr class="no-border tr-comments profile-sumsub">
+												<td colspan="4">
+													<h5>Comments</h5>
+													<ul class="list-group">
+														<li class="list-group-item">
+															<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa sit quia tenetur.</p>
+														</li>
+														<li class="list-group-item">
+															<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa sit quia tenetur.</p>
+														</li>
+													</ul>
+												</td>
+											</tr>
+											<!-- end profile three -->
+
+										</tbody>
+									</table>
+								</div>
+							</section>
+
+							<section class="panel">
+								<header class="panel-heading">
+									<div class="panel-actions">
+										<a class="fa fa-caret-down"></a>
+									</div>
+									<h2 class="panel-title">Documents</h2>
+								</header>
+								<div class="panel-body">
+									<form action="#">
+										<div class="row">
+											<div class="form-group col-md-6">
+												<label class="control-label">Document Type <span class="required">*</span></label>
+												<select class="form-control">
+													<option value="" selected="">Selecione um documento...</option>
+													<option value="Passport">Passaporte</option>
+													<option value="ProofOfResidence">Comprovante de Residência</option>
+													<option value="Selfie">Selfie</option>
+													<option value="Identity">Identidade</option>
+													<option value="IdentityFront">Identidade Frente</option>
+													<option value="IdentityBack">Identidade Verso</option>
+													<option value="DriveLicenseFront">Carteira de Motorista Frente</option>
+													<option value="DriveLicenseBack">Carteira de Motorista Verso</option>
+													<option value="SocialContract">Contrato Social</option>
+													<option value="ProofOfAddress">Comprovante de Endereço</option>
+													<option value="BusinessLicense">Alvará</option>
+													<option value="BalanceSheet">Balanço</option>
+													<option value="DetailsOfOwnership">Quadro Societário e Capital Social</option>
+													<option value="OnboardingForm">Formulário de Onboarding</option>
+													<option value="MasterPurchaseAgreement">Contrato de Compra e Venda de Criptoativos</option>
+													<option value="MandateAgreement">Contrato de Mandato</option>
+													<option value="ShareCertificate">Certificado de Titularidade das Ações</option>
+													<option value="ArticlesOfIncorporation">Estatuto Social</option>
+													<option value="CertificateOfIncorporation">Certificado de Incorporação</option>
+													<option value="CertificateOfGoodStanding">Certificado de Regularidade</option>
+													<option value="CertificateOfIncumbency">Certificado de Autorização ou Competência</option>
+													<option value="RegisterOfDirectors">Registro dos Diretores</option>
+													<option value="RegisterOfShareholders">Registro dos Sócios</option>
+													<option value="RegisterOfUltimateBeneficialOwner">Registro dos Beneficiários Finais</option>
+													<option value="RegisterofDirectorsAndShareholders">Registro dos Diretores e Sócios</option>
+													<option value="LegalOpinion">Parecer Jurídico</option>
+													<option value="CommercialRegisterExtract">Certidão do Órgão de Registro Comercial</option>
+													<option value="ChangeOfName">Mudança de Nome</option>
+													<option value="BoardOrDirectors Election">Ata de Eleição da Diretoria</option>
+													<option value="CompanyOrganizationChart">Organograma</option>
+													<option value="PowerOfAttorney">Procuração</option>
+													<option value="RelatedNews">Notícias em Jornal</option>
+												</select>
+											</div>
+											<div class="form-group col-md-6">
+												<label class="control-label">File <span class="required">*</span></label>
+												<div class="fileupload fileupload-new" data-provides="fileupload">
+													<div class="input-append">
+														<div class="uneditable-input">
+															<i class="fa fa-file fileupload-exists"></i>
+															<span class="fileupload-preview"></span>
+														</div>
+														<span class="btn btn-default btn-file">
+															<span class="fileupload-exists">Change</span>
+															<span class="fileupload-new">Select file</span>
+															<input type="file" />
+														</span>
+														<a class="btn btn-default fileupload-exists" data-dismiss="fileupload">Remove</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-12">
+												<button type="button" class="mb-xs mt-xs mr-xs btn btn-primary">Save</button>
+											</div>
+										</div>
+									</form>
+									<ul class="list-group customer-documents">
+										<li class="list-group-item">
+											<div class="thumbnail-gallery">
+												<a class="img-thumbnail" href="assets/images/projects/project-4.jpg" data-lity data-lity-target="assets/images/projects/project-4.jpg">
+													<img class="img-responsive" src="assets/images/projects/project-4.jpg">
+													<span class="zoom">
+														<i class="fa fa-search"></i>
+													</span>
+												</a>
+											</div>
+											<div class="thumbnail-info">
+												<p>
+													<b>File Name:</b> file-name-here.pdf
+												</p>
+												<p>
+													<b>File Type:</b> image/jpg
+												</p>
+												<div>
+													<button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modalDeleteFileConfirmation">Delete</button>
+												</div>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<div class="thumbnail-gallery">
+												<a class="img-thumbnail" href="#inline" data-lity>
+													<img class="img-responsive" src="img/pdf-file.jpg">
+													<span class="zoom">
+														<i class="fa fa-search"></i>
+													</span>
+												</a>
+												<div id="inline" class="lity-hide">
+													<iframe src="files/sample.pdf" width="100%" frameborder="0"></iframe>
+												</div>
+											</div>
+											<div class="thumbnail-info">
+												<p>
+													<b>File Name:</b> file-name-here.pdf
+												</p>
+												<p>
+													<b>File Type:</b> image/jpg
+												</p>
+												<div>
+													<button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modalDeleteFileConfirmation">Delete</button>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="modal fade" id="modalDeleteFileConfirmation" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="myModalLabel">Are you sure?</h4>
+											</div>
+											<div class="modal-body">
+													<p>Are you sure that you want to delete this file?</p>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-primary">Confirm</button>
+												<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+
+						</div>
+
+					</div>
+
+				</main>
+
+			</section>
+		</div>
+
+	</section>
+
+	<script src="js/app.js"></script>
+	<script>
+		function OpenProfileEditFrom(selector) {
+			var element = document.querySelector('.' + selector);
+			var comments = document.querySelector('.tr-comment-form.' + selector);
+			var commentForm = document.querySelector('.tr-comments.' + selector);
+			if (element && comments && commentForm) {
+				element.classList.add('tr-active');
+				comments.classList.add('tr-active');
+				commentForm.classList.add('tr-active');
+			}
+		}
+
+		function CloseProfileEditFrom(selector) {
+			var element = document.querySelector('.' + selector);
+			var comments = document.querySelector('.tr-comment-form.' + selector);
+			var commentForm = document.querySelector('.tr-comments.' + selector);
+			if (element && comments && commentForm) {
+				element.classList.remove('tr-active');
+				comments.classList.remove('tr-active');
+				commentForm.classList.remove('tr-active');
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+/* VENDORS */
+@import url("../assets/vendor/bootstrap/css/bootstrap.css");
+@import url("../assets/vendor/font-awesome/css/font-awesome.css");
+@import url("../assets/vendor/magnific-popup/magnific-popup.css");
+@import url("../assets/vendor/bootstrap-datepicker/css/datepicker3.css");
+
+
+@import url("../assets/vendor/jquery-ui/css/ui-lightness/jquery-ui-1.10.4.custom.css");
+@import url("../assets/vendor/bootstrap-multiselect/bootstrap-multiselect.css");
+@import url("../assets/vendor/morris/morris.css");
+@import url("../assets/vendor/jquery-datatables-bs3/assets/css/datatables.css");
+@import url("../assets/vendor/bootstrap-datepicker/css/datepicker3.css");
+@import url("../assets/vendor/select2/select2.css");
+@import url("../assets/vendor/bootstrap-fileupload/bootstrap-fileupload.min.css");
+@import url("../assets/vendor/lity/lity.min.css");
+
+/* THEME */
+@import url("../assets/stylesheets/theme.css");
+@import url("../assets/stylesheets/skins/default.css");
+@import url("../assets/stylesheets/theme-custom.css");
