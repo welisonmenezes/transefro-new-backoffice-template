@@ -522,6 +522,18 @@ ul.nav-main > li > a:hover {
     margin-bottom: 1rem;
 }
 
+.table-filter-wrap > div {
+    width: 100%;
+}
+
+.table-filter-wrap > div button,
+.table-filter-wrap .input-group-btn,
+.table-filter-wrap .drop-filter {
+    white-space: nowrap;
+    word-break: keep-all;
+    width: auto;
+}
+
 .table-filter {
     justify-content: flex-start;
 }
