@@ -36,7 +36,7 @@ LoaderScripts("./assets/vendor/jquery-maskedinput/jquery.maskedinput.js", true);
 LoaderScripts("./assets/vendor/select2/select2.js", true);
 LoaderScripts("./assets/vendor/bootstrap-fileupload/bootstrap-fileupload.min.js", true);
 LoaderScripts("./assets/vendor/lity/lity.min.js", true);
-// LoaderScripts("./", true);
+LoaderScripts("./assets/vendor/vanilla-back-to-top/vanilla-back-to-top.min.js", true);
 // LoaderScripts("./", true);
 // LoaderScripts("./", true);
 // LoaderScripts("./", true);
@@ -200,6 +200,13 @@ LoaderScripts("assets/javascripts/theme.init.js", function() {
             colors: ['#5bc0de', '#ed9c28', '#d2322d', '#47a447']
         });
     }
+
+
+    addBackToTop({
+        diameter: 42,
+        backgroundColor: '#3938F1',
+        textColor: '#fff'
+    })
 
 
 }, true);
