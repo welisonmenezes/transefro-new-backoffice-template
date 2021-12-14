@@ -37,7 +37,7 @@ LoaderScripts("./assets/vendor/select2/select2.js", true);
 LoaderScripts("./assets/vendor/bootstrap-fileupload/bootstrap-fileupload.min.js", true);
 LoaderScripts("./assets/vendor/lity/lity.min.js", true);
 LoaderScripts("./assets/vendor/vanilla-back-to-top/vanilla-back-to-top.min.js", true);
-// LoaderScripts("./", true);
+LoaderScripts("./assets/vendor/xzoom/xzoom.min.js", true);
 // LoaderScripts("./", true);
 // LoaderScripts("./", true);
 // LoaderScripts("./", true);
@@ -206,7 +206,16 @@ LoaderScripts("assets/javascripts/theme.init.js", function() {
         diameter: 42,
         backgroundColor: '#3938F1',
         textColor: '#fff'
-    })
+    });
+
+    $(".xzoom").each(function() {
+        $(this).xzoom({
+            tint: '#333', 
+            Xoffset: 15,
+            zoomWidth: 500,
+            zoomHeight: 350
+        });
+    });
 
 
 }, true);

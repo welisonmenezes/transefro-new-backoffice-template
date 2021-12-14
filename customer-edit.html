@@ -595,7 +595,7 @@
 										<li class="list-group-item">
 											<div class="thumbnail-gallery">
 												<a class="img-thumbnail" href="assets/images/projects/project-4.jpg" data-lity data-lity-target="assets/images/projects/project-4.jpg">
-													<img class="img-responsive" src="assets/images/projects/project-4.jpg">
+													<img class="img-responsive xzoom" src="assets/images/projects/project-4.jpg" xoriginal="assets/images/projects/project-4.jpg">
 													<span class="zoom">
 														<i class="fa fa-search"></i>
 													</span>
@@ -624,6 +624,27 @@
 												<div id="inline" class="lity-hide">
 													<iframe src="files/sample.pdf" width="100%" frameborder="0"></iframe>
 												</div>
+											</div>
+											<div class="thumbnail-info">
+												<p>
+													<b>File Name:</b> file-name-here.pdf
+												</p>
+												<p>
+													<b>File Type:</b> image/jpg
+												</p>
+												<div>
+													<button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modalDeleteFileConfirmation">Delete</button>
+												</div>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<div class="thumbnail-gallery">
+												<a class="img-thumbnail" href="img/doc-sample.jpg" data-lity data-lity-target="img/doc-sample.jpg">
+													<img class="img-responsive xzoom" src="img/doc-sample.jpg" xoriginal="img/doc-sample.jpg">
+													<span class="zoom">
+														<i class="fa fa-search"></i>
+													</span>
+												</a>
 											</div>
 											<div class="thumbnail-info">
 												<p>
@@ -666,8 +687,15 @@
 									<h2 class="panel-title">Edit Another Customer</h2>
 								</header>
 								<div class="panel-body">
-									<a href="#" class="mb-xs mt-xs mr-xs btn btn-default"><i class="fa fa-chevron-left"></i> Prev</a>
-									<a href="#" class="mb-xs mt-xs mr-xs btn btn-default"><i class="fa fa-chevron-right"></i> Next</a>
+									<div class="d-flex justify-content-between">
+										<div>
+											<a href="#" class="mb-xs mt-xs mr-xs btn btn-default"><i class="fa fa-chevron-left"></i> Prev</a>
+											<a href="#" class="mb-xs mt-xs mr-xs btn btn-default"><i class="fa fa-chevron-right"></i> Next</a>
+										</div>
+										<div>
+											<a href="customers.html" class="mb-xs mt-xs mr-xs btn btn-default"><i class="fa fa-filter"></i> Back to Filter</a>
+										</div>
+									</div>
 								</div>
 							</section>
 
