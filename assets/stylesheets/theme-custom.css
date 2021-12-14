@@ -203,6 +203,9 @@ ul.nav-main > li > a:hover {
     cursor: pointer;
 }
 
+.xzoom-loading {
+    background-image: none !important;
+}
 
 
 
